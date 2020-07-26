@@ -13,6 +13,13 @@ namespace WindowsFormsApp2
     public partial class Form1 : Form
     {
         static int count = 0;
+        Color[] colors = {
+        Color.Red,
+        Color.Firebrick,
+        Color.AliceBlue,
+        Color.Cyan,
+        Color.DarkSalmon
+        };
         public Form1()
         {
             InitializeComponent();
@@ -20,8 +27,12 @@ namespace WindowsFormsApp2
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.BackColor =  (++count % 2 == 0 ) ?  Color.Red : Color.Blue;
-            this.Text = count.ToString();
+            this.BackColor = colors[--count];
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.BackColor = colors[++count];
         }
     }
 }
