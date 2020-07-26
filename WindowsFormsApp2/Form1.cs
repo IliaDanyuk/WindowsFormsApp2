@@ -27,12 +27,14 @@ namespace WindowsFormsApp2
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.BackColor = colors[--count];
+            if (count - 1 >= 0)
+                this.BackColor = colors[--count];
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.BackColor = colors[++count];
+            if (count + 1 < colors.Length )
+                this.BackColor = colors[++count];
         }
     }
 }
