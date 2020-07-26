@@ -38,12 +38,14 @@ namespace WindowsFormsApp2
             if (button1.Tag.Equals("stop_timer"))
             {
                 timer.Start();
-                button1.Tag = "run_timer";
+                button1.Tag  = "run_timer";
+                button1.Text  = "stop_timer";
             }
             else if (button1.Tag.Equals("run_timer"))
             {
                 timer.Stop();
                 button1.Tag = "stop_timer";
+                button1.Text = "run_timer";
             }
         }
     }
